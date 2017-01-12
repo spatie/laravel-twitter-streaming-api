@@ -17,6 +17,7 @@
     ],
     "require": {
         "php": "^7.0",
+        "illuminate/support": "^5.3",
         "spatie/twitter-streaming-api": "dev-master"
     },
     "require-dev": {
