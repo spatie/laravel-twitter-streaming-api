@@ -2,7 +2,7 @@
 
 namespace Spatie\LaravelTwitterStreamingApi;
 
-class LaravelTwitterStreamingApiClass
+class SkeletonClass
 {
     /**
      * Create a new LaravelTwitterStreamingApi Instance.
