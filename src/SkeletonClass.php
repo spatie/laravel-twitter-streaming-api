@@ -1,11 +1,11 @@
 <?php
 
-namespace Spatie\Skeleton;
+namespace Spatie\LaravelTwitterStreamingApi;
 
-class SkeletonClass
+class LaravelTwitterStreamingApiClass
 {
     /**
-     * Create a new Skeleton Instance.
+     * Create a new LaravelTwitterStreamingApi Instance.
      */
     public function __construct()
     {

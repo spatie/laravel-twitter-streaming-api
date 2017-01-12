@@ -1,34 +1,35 @@
 {
-    "name": "spatie/:package_name",
-    "description": ":package_description",
+    "name": "spatie/laravel-twitter-streaming-api",
+    "description": "Easily work with the Twitter Streaming API in a Laravel app",
     "keywords": [
         "spatie",
-        ":package_name"
+        "laravel-twitter-streaming-api"
     ],
-    "homepage": "https://github.com/spatie/:package_name",
+    "homepage": "https://github.com/spatie/laravel-twitter-streaming-api",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
+            "name": "Freek Van der Herten",
+            "email": "freek@spatie.be",
             "homepage": "https://spatie.be",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^7.0"
+        "php": "^7.0",
+        "spatie/twitter-streaming-api": "dev-master"
     },
     "require-dev": {
         "phpunit/phpunit": "5.*"
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\Skeleton\\": "src"
+            "Spatie\\LaravelTwitterStreamingApi\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Skeleton\\Test\\": "tests"
+            "Spatie\\LaravelTwitterStreamingApi\\Test\\": "tests"
         }
     },
     "scripts": {

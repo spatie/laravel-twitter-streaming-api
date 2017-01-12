@@ -1,10 +1,10 @@
 <?php
 
-namespace Spatie\Skeleton;
+namespace Spatie\LaravelTwitterStreamingApi;
 
 use Illuminate\Support\ServiceProvider;
 
-class SkeletonServiceProvider extends ServiceProvider
+class LaravelTwitterStreamingApiServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
