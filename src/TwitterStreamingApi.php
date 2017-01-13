@@ -2,9 +2,9 @@
 
 namespace Spatie\LaravelTwitterStreamingApi;
 
+use Spatie\TwitterStreamingApi\UserStream;
 use Illuminate\Contracts\Config\Repository;
 use Spatie\TwitterStreamingApi\PublicStream;
-use Spatie\TwitterStreamingApi\UserStream;
 
 class TwitterStreamingApi
 {
