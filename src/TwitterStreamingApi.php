@@ -6,7 +6,7 @@ use Illuminate\Contracts\Config\Repository;
 use Spatie\TwitterStreamingApi\PublicStream;
 use Spatie\TwitterStreamingApi\UserStream;
 
-class Twitter
+class TwitterStreamingApi
 {
     /** @var array */
     protected $config;
@@ -20,9 +20,9 @@ class Twitter
     {
         return new PublicStream(
             $this->config['access_token'],
-            $this->config['access_secret'],
+            $this->config['access_token_secret'],
             $this->config['consumer_key'],
-            $this->config['consumer_key_secret']
+            $this->config['consumer_secret']
         );
     }
 
@@ -30,9 +30,9 @@ class Twitter
     {
         return new UserStream(
             $this->config['access_token'],
-            $this->config['access_secret'],
+            $this->config['access_token_secret'],
             $this->config['consumer_key'],
-            $this->config['consumer_key_secret']
+            $this->config['consumer_secret']
         );
     }
 }

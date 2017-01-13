@@ -25,6 +25,6 @@ class TwitterStreamingApiServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__.'/../config/laravel-twitter-streaming-api.php', 'laravel-twitter-streaming-api');
 
-        $this->app->bind('laravel-twitter-streaming-api', Twitter::class);
+        $this->app->bind('laravel-twitter-streaming-api', TwitterStreamingApi::class);
     }
 }
