@@ -41,7 +41,6 @@ You must install this service provider.
 'providers' => [
     ...
     Spatie\LaravelTwitterStreamingApi\TwitterStreamingApiServiceProvider::class,
-    ...
 ];
 ```
 
@@ -52,11 +51,16 @@ This package also comes with a facade, which provides an easy way to call the th
 'aliases' => [
     ...
     'TwitterStreamingApi' => Spatie\LaravelTwitterStreamingApi\TwitterStreamingApiFacade::class,
-    ...
 ];
 ```
 
-The following config file will be published in `config/laravel-twitter-streaminga-pi.php`
+The config file must be published with this command:
+
+```bash
+php artisan vendor:publish --provider="Spatie\LaravelTwitterStreamingApi\TwitterStreamingApiServiceProvider" --tag="config"
+```
+
+It will be published in `config/laravel-twitter-streaming-api.php`
 
 ```php
 return [
