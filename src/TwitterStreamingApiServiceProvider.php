@@ -4,7 +4,7 @@ namespace Spatie\LaravelTwitterStreamingApi;
 
 use Illuminate\Support\ServiceProvider;
 
-class LaravelTwitterStreamingApiServiceProvider extends ServiceProvider
+class TwitterStreamingApiServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -24,5 +24,7 @@ class LaravelTwitterStreamingApiServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(__DIR__.'/../config/laravel-twitter-streaming-api.php', 'laravel-twitter-streaming-api');
+
+        $this->app->bind('laravel-twitter-streaming-api', Twitter::class);
     }
 }
