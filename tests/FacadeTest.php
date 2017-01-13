@@ -2,9 +2,9 @@
 
 namespace Spatie\LaravelTwitterStreamingApi\Test;
 
-use Spatie\TwitterStreamingApi\PublicStream;
 use TwitterStreamingApi;
 use Spatie\TwitterStreamingApi\UserStream;
+use Spatie\TwitterStreamingApi\PublicStream;
 
 class FacadeTest extends TestCase
 {
