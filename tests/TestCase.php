@@ -8,7 +8,6 @@ use Spatie\LaravelTwitterStreamingApi\TwitterStreamingApiServiceProvider;
 
 abstract class TestCase extends Orchestra
 {
-
     /**
      * @param \Illuminate\Foundation\Application $app
      *
