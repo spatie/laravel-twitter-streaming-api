@@ -125,11 +125,12 @@ TwitterStreamingApi::publicStream()
 use TwitterStreamingApi;
 
 TwitterStreamingApi::userStream()
-)->onEvent(function(array $event) {
+->onEvent(function(array $event) {
     if ($event['event'] === 'favorite') {
         echo "Our tweet {$event['target_object']['text']} got favorited by {$event['source']['screen_name']}";
     }
-})->startListening();
+})
+->startListening();
 ```
 
 ## A word to the wise
