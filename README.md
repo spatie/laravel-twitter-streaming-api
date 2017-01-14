@@ -12,8 +12,8 @@ Twitter provides a streaming API with which you can do interesting things such a
 
 ```php
 TwitterStreamingApi::publicStream()
-->whenHears('@spatie_be', function(array $tweet) {
-    echo "We got mentioned by {$tweet['user']['screen_name']} who tweeted {$tweet['text']}";
+->whenHears('#laravel', function(array $tweet) {
+    echo "{$tweet['user']['screen_name']} tweeted {$tweet['text']}";
 })
 ->startListening();
 ```
@@ -109,8 +109,8 @@ The first parameter of `whenHears` must be a string or an array containing the w
 use TwitterStreamingApi;
 
 TwitterStreamingApi::publicStream()
-->whenHears('@spatie_be', function(array $tweet) {
-    echo "We got mentioned by {$tweet['user']['screen_name']} who tweeted {$tweet['text']}";
+->whenHears('#laravel', function(array $tweet) {
+    echo "{$tweet['user']['screen_name']} tweeted {$tweet['text']}";
 })
 ->startListening();
 ```
