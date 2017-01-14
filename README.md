@@ -18,6 +18,8 @@ TwitterStreamingApi::publicStream()
 ->startListening();
 ```
 
+Here's [an example Laravel application](https://github.com/spatie/laravel-twitter-streaming-api) with the package pre-installed. It contains [an artisan command](https://github.com/spatie/laravel-twitter-streaming-api-example-app/blob/master/app/Console/Commands/ListenForHashTags.php) to kick off the listening process.
+
 ## Postcardware
 
 You're free to use this package (it's [MIT-licensed](LICENSE.md)), but if it makes it to your production environment we highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using.
