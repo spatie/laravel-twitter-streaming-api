@@ -75,7 +75,7 @@ return [
 
     'access_token_secret' => env('TWITTER_ACCESS_TOKEN_SECRET'),
 
-    'consumer_key' => env('CTWITTER_ONSUMER_KEY'),
+    'consumer_key' => env('TWITTER_CONSUMER_KEY'),
 
     'consumer_secret' => env('TWITTER_CONSUMER_SECRET'),
 ];
