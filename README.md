@@ -131,9 +131,15 @@ TwitterStreamingApi::userStream()
 ->startListening();
 ```
 
+## Suggestion on how to run in a production environment
+
+When using this in production you could opt to create [an artisan command](https://github.com/spatie/laravel-twitter-streaming-api-example-app/blob/8175995/app/Console/Commands/ListenForHashTags.php) to listen for incoming events from Twitter. You can use [Supervisord](http://supervisord.org/) to make sure that command is running all the time.
+
 ## A word to the wise
 
 These APIs work in realtime, so they could report a lot of activity. If you need to do some heavy work processing that activity it's best to put that work in a queue to keep your listening process fast.
+
+
 
 
 ## Changelog
