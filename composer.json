@@ -40,5 +40,15 @@
     },
     "config": {
         "sort-packages": true
-  }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Spatie\\LaravelTwitterStreamingApi\\TwitterStreamingApiServiceProvider"
+            ],
+            "aliases": {
+                "TwitterStreamingApi": "Spatie\\LaravelTwitterStreamingApi\\TwitterStreamingApiFacade"
+            }
+        }
+    }
 }
