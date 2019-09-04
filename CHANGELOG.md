@@ -2,6 +2,9 @@
 
 All notable changes to `laravel-twitter-streaming-api` will be documented in this file
 
+## 1.2.0 - 2019-09-04
+- Laravel 6 compatibility; dropped support for older versions
+
 ## 1.1.1 - 2019-03-08
 
 - allow dev dependenices (required to install Phirehose dev-master for PHP 7.2 and above)
