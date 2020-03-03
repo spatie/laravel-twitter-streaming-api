@@ -2,7 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/laravel-twitter-streaming-api.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-twitter-streaming-api)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/spatie/laravel-twitter-streaming-api/master.svg?style=flat-square)](https://travis-ci.org/spatie/laravel-twitter-streaming-api)
+![Test Status](https://img.shields.io/github/workflow/status/spatie/laravel-twitter-streaming-api/run-tests?label=tests&style=flat-square)
 [![Quality Score](https://img.shields.io/scrutinizer/g/spatie/laravel-twitter-streaming-api.svg?style=flat-square)](https://scrutinizer-ci.com/g/spatie/laravel-twitter-streaming-api)
 [![StyleCI](https://styleci.io/repos/78793113/shield?branch=master)](https://styleci.io/repos/78793113)
 [![Total Downloads](https://img.shields.io/packagist/dt/spatie/laravel-twitter-streaming-api.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-twitter-streaming-api)
@@ -18,6 +18,12 @@ TwitterStreamingApi::publicStream()
 ```
 
 Here's [an example Laravel application](https://github.com/spatie/laravel-twitter-streaming-api-example-app) with the package pre-installed. It contains [an artisan command](https://github.com/spatie/laravel-twitter-streaming-api-example-app/blob/master/app/Console/Commands/ListenForHashTags.php) to kick off the listening process.
+
+## Support us
+
+We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us). 
+
+We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
 
 ## Installation
 
@@ -151,25 +157,10 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 If you discover any security related issues, please email freek@spatie.be instead of using the issue tracker.
 
-## Postcardware
-
-You're free to use this package, but if it makes it to your production environment we highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using.
-
-Our address is: Spatie, Samberstraat 69D, 2060 Antwerp, Belgium.
-
-We publish all received postcards [on our company website](https://spatie.be/en/opensource/postcards).
-
 ## Credits
 
 - [Freek Van der Herten](https://github.com/freekmurze)
 - [All Contributors](../../contributors)
-
-## Support us
-
-Spatie is a webdesign agency based in Antwerp, Belgium. You'll find an overview of all our open source projects [on our website](https://spatie.be/opensource).
-
-Does your business depend on our contributions? Reach out and support us on [Patreon](https://www.patreon.com/spatie). 
-All pledges will be dedicated to allocating workforce on maintenance and new awesome stuff.
 
 ## License
 
