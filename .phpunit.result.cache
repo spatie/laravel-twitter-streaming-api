@@ -1,1 +1,1 @@
-C:37:"PHPUnit\Runner\DefaultTestResultCache":234:{a:2:{s:7:"defects";a:0:{}s:5:"times";a:2:{s:80:"Spatie\LaravelTwitterStreamingApi\Test\FacadeTest::it_can_return_a_public_stream";d:0.058;s:78:"Spatie\LaravelTwitterStreamingApi\Test\FacadeTest::it_can_return_a_user_stream";d:0.004;}}}
+C:37:"PHPUnit\Runner\DefaultTestResultCache":234:{a:2:{s:7:"defects";a:0:{}s:5:"times";a:2:{s:80:"Spatie\LaravelTwitterStreamingApi\Test\FacadeTest::it_can_return_a_public_stream";d:0.102;s:78:"Spatie\LaravelTwitterStreamingApi\Test\FacadeTest::it_can_return_a_user_stream";d:0.004;}}}
