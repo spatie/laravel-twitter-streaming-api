@@ -2,8 +2,14 @@
 
 All notable changes to `laravel-twitter-streaming-api` will be documented in this file
 
+## 1.3.0 - 2020-03-03
+
+- add support for Laravel 7
+
 ## 1.2.0 - 2019-09-04
-- Laravel 6 compatibility; dropped support for older versions
+
+- add support for Laravel 6
+- dropped support for older Laravel versions
 
 ## 1.1.1 - 2019-03-08
 
