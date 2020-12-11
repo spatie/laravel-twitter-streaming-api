@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-twitter-streaming-api` will be documented in this file
 
+## 1.4.1 - 2020-12-12
+
+- allow PHP 8
+
 ## 1.4.0 - 2020-09-09
 
 - add support for Laravel 8
