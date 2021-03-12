@@ -5,7 +5,10 @@ namespace Spatie\LaravelTwitterStreamingApi;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Spatie\LaravelTwitterStreamingApi\LaravelTwitterStreamingApiClass
+ * @method static \Spatie\TwitterStreamingApi\PublicStream publicStream()
+ * @method static \Spatie\TwitterStreamingApi\UserStream userStream()
+ *
+ * @see \Spatie\LaravelTwitterStreamingApi\TwitterStreamingApi
  */
 class TwitterStreamingApiFacade extends Facade
 {
