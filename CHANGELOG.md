@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-twitter-streaming-api` will be documented in this file
 
+## 2.0.0 - 2021-05-17
+
+- Twitter API v2 compatibility (#36)
+
 ## 1.4.1 - 2020-12-12
 
 - allow PHP 8
