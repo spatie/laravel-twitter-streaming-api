@@ -2,14 +2,14 @@
 
 namespace Spatie\LaravelTwitterStreamingApi;
 
-use Spatie\TwitterStreamingApi\UserStream;
 use Illuminate\Contracts\Config\Repository;
 use Spatie\TwitterStreamingApi\PublicStream;
+use Spatie\TwitterStreamingApi\UserStream;
 
 class TwitterStreamingApi
 {
     /** @var array */
-    protected $config;
+    protected array $config;
 
     public function __construct(Repository $config)
     {
@@ -19,20 +19,19 @@ class TwitterStreamingApi
     public function publicStream(): PublicStream
     {
         return new PublicStream(
-            $this->config['access_token'],
-            $this->config['access_token_secret'],
-            $this->config['consumer_key'],
-            $this->config['consumer_secret']
+            $this->config['api_key'],
+            $this->config['api_secret_key'],
+            $this->config['bearer_token']
         );
     }
 
     public function userStream(): UserStream
     {
         return new UserStream(
-            $this->config['access_token'],
-            $this->config['access_token_secret'],
-            $this->config['consumer_key'],
-            $this->config['consumer_secret']
+            $this->config['handle'],
+            $this->config['api_key'],
+            $this->config['api_secret_key'],
+            $this->config['bearer_token']
         );
     }
 }
