@@ -5,14 +5,14 @@ return [
     /*
      * To work with Twitter's Streaming API you'll need some credentials.
      *
-     * If you don't have credentials yet, head over to https://apps.twitter.com/
+     * If you don't have credentials yet, head over to https://developers.twitter.com/
      */
 
-    'access_token' => env('TWITTER_ACCESS_TOKEN'),
+    'handle' => env('TWITTER_HANDLE'),
 
-    'access_token_secret' => env('TWITTER_ACCESS_TOKEN_SECRET'),
+    'api_key' => env('TWITTER_API_KEY'),
 
-    'consumer_key' => env('TWITTER_CONSUMER_KEY'),
+    'api_secret_key' => env('TWITTER_API_SECRET_KEY'),
 
-    'consumer_secret' => env('TWITTER_CONSUMER_SECRET'),
+    'bearer_token' => env('TWITTER_BEARER_TOKEN'),
 ];

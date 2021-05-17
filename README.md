@@ -5,7 +5,9 @@
 ![Test Status](https://img.shields.io/github/workflow/status/spatie/laravel-twitter-streaming-api/run-tests?label=tests&style=flat-square)
 [![Total Downloads](https://img.shields.io/packagist/dt/spatie/laravel-twitter-streaming-api.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-twitter-streaming-api)
 
-Twitter provides a streaming API with which you can do interesting things such as listening for tweets that contain specific strings or actions a user might take (e.g. liking a tweet, following someone,...). This package makes it very easy to work with the API.
+Twitter provides a streaming API with which you can do interesting things such as listening for tweets that contain
+specific strings or actions a user might take (e.g. liking a tweet, following someone,...). This package makes it very
+easy to work with the API.
 
 ```php
 TwitterStreamingApi::publicStream()
@@ -15,15 +17,21 @@ TwitterStreamingApi::publicStream()
 ->startListening();
 ```
 
-Here's [an example Laravel application](https://github.com/spatie/laravel-twitter-streaming-api-example-app) with the package pre-installed. It contains [an artisan command](https://github.com/spatie/laravel-twitter-streaming-api-example-app/blob/master/app/Console/Commands/ListenForHashTags.php) to kick off the listening process.
+Here's [an example Laravel application](https://github.com/spatie/laravel-twitter-streaming-api-example-app) with the
+package pre-installed. It
+contains [an artisan command](https://github.com/spatie/laravel-twitter-streaming-api-example-app/blob/master/app/Console/Commands/ListenForHashTags.php)
+to kick off the listening process.
 
 ## Support us
 
 [<img src="https://github-ads.s3.eu-central-1.amazonaws.com/laravel-twitter-streaming-api.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/laravel-twitter-streaming-api)
 
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
+We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can
+support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
 
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using.
+You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards
+on [our virtual postcard wall](https://spatie.be/open-source/postcards).
 
 ## Installation
 
@@ -31,26 +39,6 @@ You can install the package via composer:
 
 ``` bash
 composer require spatie/laravel-twitter-streaming-api
-```
-
-You must install this service provider.
-
-```php
-// config/app.php
-'providers' => [
-    ...
-    Spatie\LaravelTwitterStreamingApi\TwitterStreamingApiServiceProvider::class,
-];
-```
-
-This package also comes with a facade, which provides an easy way to call the class.
-
-```php
-// config/app.php
-'aliases' => [
-    ...
-    'TwitterStreamingApi' => Spatie\LaravelTwitterStreamingApi\TwitterStreamingApiFacade::class,
-];
 ```
 
 The config file must be published with this command:
@@ -64,33 +52,37 @@ It will be published in `config/laravel-twitter-streaming-api.php`
 ```php
 return [
 
-    /**
+    /*
      * To work with Twitter's Streaming API you'll need some credentials.
      *
-     * If you don't have credentials yet, head over to https://apps.twitter.com/
+     * If you don't have credentials yet, head over to https://developers.twitter.com/
      */
 
-    'access_token' => env('TWITTER_ACCESS_TOKEN'),
+    'handle' => env('TWITTER_HANDLE'),
 
-    'access_token_secret' => env('TWITTER_ACCESS_TOKEN_SECRET'),
+    'api_key' => env('TWITTER_API_KEY'),
 
-    'consumer_key' => env('TWITTER_CONSUMER_KEY'),
+    'api_secret_key' => env('TWITTER_API_SECRET_KEY'),
 
-    'consumer_secret' => env('TWITTER_CONSUMER_SECRET'),
+    'bearer_token' => env('TWITTER_BEARER_TOKEN'),
 ];
 ```
 
 ## Getting credentials
 
-In order to use this package you'll need to get some credentials from Twitter. Head over to the [Application management on Twitter](https://apps.twitter.com/) to create an application.
+In order to use this package you'll need to get some credentials from Twitter. Head over to
+the [Developer Portal on Twitter](https://developers.twitter.com/) to create an application.
 
-Once you've created your application, click on the `Keys and access tokens` tab to retrieve your `consumer_key`, `consumer_secret`, `access_token` and `access_token_secret`.
+Once you've created your application, click on the `Keys and tokens` tab to retrieve your `bearer_token`, `api_key`
+and `api_secret_key`.
 
-![Keys and access tokens tab on Twitter](https://spatie.github.io/twitter-streaming-api/images/twitter.jpg)
+![Keys and tokens tab on Twitter](docs/tokens.png)
 
 ## Usage
 
-Currently, this package works with the public stream and the user stream. Both the `PublicStream` and `UserStream` classes provide a `startListening` function that kicks of the listening process. Unless you cancel it your PHP process will execute that function forever. No code after the function will be run.
+Currently, this package works with the public stream and the user stream. Both the `PublicStream` and `UserStream`
+classes provide a `startListening` function that kicks of the listening process. Unless you cancel it your PHP process
+will execute that function forever. No code after the function will be run.
 
 In the example below a facade is used. If you don't like facades you can replace them with
 
@@ -102,7 +94,8 @@ app(Spatie\LaravelTwitterStreamingApi\TwitterStreamingApi::class)
 
 The public stream can be used to listen for specific words that are being tweeted.
 
-The first parameter of `whenHears` must be a string or an array containing the word or words you want to listen for. The second parameter should be a callable that will be executed when one of your words is used on Twitter.
+The first parameter of `whenHears` must be a string, or an array containing the word or words you want to listen for. The
+second parameter should be a callable that will be executed when one of your words is used on Twitter.
 
 ```php
 use TwitterStreamingApi;
@@ -130,11 +123,15 @@ TwitterStreamingApi::userStream()
 
 ## Suggestion on how to run in a production environment
 
-When using this in production you could opt to create [an artisan command](https://github.com/spatie/laravel-twitter-streaming-api-example-app/blob/8175995/app/Console/Commands/ListenForHashTags.php) to listen for incoming events from Twitter. You can use [Supervisord](http://supervisord.org/) to make sure that command is running all the time.
+When using this in production you could opt to
+create [an artisan command](https://github.com/spatie/laravel-twitter-streaming-api-example-app/blob/8175995/app/Console/Commands/ListenForHashTags.php)
+to listen for incoming events from Twitter. You can use [Supervisord](http://supervisord.org/) to make sure that command
+is running all the time.
 
 ## A word to the wise
 
-These APIs work in realtime, so they could report a lot of activity. If you need to do some heavy work processing that activity it's best to put that work in a queue to keep your listening process fast.
+These APIs work in realtime, so they could report a lot of activity. If you need to do some heavy work processing that
+activity it's best to put that work in a queue to keep your listening process fast.
 
 ## Changelog
 
@@ -148,7 +145,7 @@ $ composer test
 
 ## Contributing
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
 
 ## Security
 
