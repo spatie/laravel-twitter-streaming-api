@@ -19,9 +19,9 @@ class TwitterStreamingApi
     public function publicStream(): PublicStream
     {
         return new PublicStream(
+            $this->config['bearer_token'],
             $this->config['api_key'],
-            $this->config['api_secret_key'],
-            $this->config['bearer_token']
+            $this->config['api_secret_key']
         );
     }
 
@@ -29,9 +29,9 @@ class TwitterStreamingApi
     {
         return new UserStream(
             $this->config['handle'],
+            $this->config['bearer_token'],
             $this->config['api_key'],
-            $this->config['api_secret_key'],
-            $this->config['bearer_token']
+            $this->config['api_secret_key']
         );
     }
 }
