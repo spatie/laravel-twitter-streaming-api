@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-twitter-streaming-api` will be documented in this file
 
+## 2.0.1 - 2021-05-31
+
+- fix unauthorized error due to params order (#38)
+
 ## 2.0.0 - 2021-05-17
 
 - Twitter API v2 compatibility (#36)
