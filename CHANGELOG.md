@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-twitter-streaming-api` will be documented in this file
 
+## 2.1.0 - 2022-02-09
+
+- add support for Laravel 9
+
 ## 2.0.1 - 2021-05-31
 
 - fix unauthorized error due to params order (#38)
