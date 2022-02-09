@@ -2,7 +2,6 @@
 
 namespace Spatie\LaravelTwitterStreamingApi\Test;
 
-use Illuminate\Foundation\Application;
 use Orchestra\Testbench\TestCase as Orchestra;
 use Spatie\LaravelTwitterStreamingApi\TwitterStreamingApiFacade;
 use Spatie\LaravelTwitterStreamingApi\TwitterStreamingApiServiceProvider;
