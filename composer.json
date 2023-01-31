@@ -17,12 +17,12 @@
     ],
     "require": {
         "php": "^8.0",
-        "illuminate/support": "^8.0|^9.0",
+        "illuminate/support": "^8.0|^9.0|^10.0",
         "spatie/twitter-streaming-api": "^2.0.0"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.0",
-        "orchestra/testbench": "^6.0|^7.0",
+        "orchestra/testbench": "^6.0|^7.0|^8.0",
         "phpunit/phpunit": "^9.0"
     },
     "autoload": {
@@ -38,7 +38,8 @@
     "scripts": {
         "lint": "./vendor/bin/php-cs-fixer fix",
         "test": "./vendor/bin/phpunit",
-        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"    },
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
